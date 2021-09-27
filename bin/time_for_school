@@ -1,8 +1,15 @@
-#!/usr/bin/env ruby
+# !/usr/bin/env ruby
 
 require_relative "../lib/user"
 require_relative "../lib/teacher"
 require_relative "../lib/student"
+
+
+
+jim = User.new
+jim.first_name = 'Jim'
+jim.last_name = 'Scott'
+puts jim
 
 steve = Student.new
 steve.first_name = "Steve"
@@ -13,8 +20,15 @@ avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
 
-some_knowledge = avi.teach 
+some_knowledge = avi.teach
 
 steve.learn(some_knowledge)
 
+some_newKnoledge = avi.teach
+steve.learn(some_newKnoledge)
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+puts "Steve just learned this important knowledge: '#{steve.knowledge.last}' from Avi"
+puts jim
+
+
+
